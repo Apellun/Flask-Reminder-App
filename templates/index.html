@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reminder</title>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        body {
+            background-color: AliceBlue;
+            font-family: sans-serif;
+            color: black;
+        }
+        h1 {
+            color: red;
+            padding-top: 50px
+        }
+        p {
+            color: red;
+            font-weight: bold;
+        }
+        form {
+            margin: auto;
+            width: 50%;
+            border: 2px solid green;
+            padding: 20px;
+            border-radius: 5px;
+            padding-bottom: 0px;
+          }
+        .crowdedtext{line-height: 30px}
+        .commentarea {
+            margin: 0 auto;
+            width: 80%;
+            border: 2px solid green;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            border: 0px;
+            font-size: 16px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        hr {
+            border-width: 0px;
+            padding: 2px;
+        }
+    </style>
+    <body>
+    <h1 align="center">Set a reminder</h1>
+        <div>
+            <hr>
+            <form action="" method="post">
+                <label for="event_name">Event name:</label>
+                <input type="text" id="event_name" name="event_name" required><br><br>
+                <label for="user_email">Email for the reminder:</label>
+                <input type="text" id="user_email" name="user_email" required><br><br>
+            <hr>
+            <select name="initial_timezone" required>
+                <option value="">Choose the timezone of the event</option>
+                {% for timezone in timezones %}
+                    <option value="{{ timezone }}">{{ timezone }}</option>
+                {% endfor %}
+            </select>
+            <hr>
+            <select name="requested_timezone" required>
+                <option value="">Choose your timezone</option>
+                {% for timezone in timezones %}
+                    <option value="{{ timezone }}">{{ timezone }}</option>
+                {% endfor %}
+            </select>
+            <hr>
+                <label class=crowdedtext for="initial_datetime">Choose the date and the time of the event (not in the past):</label>
+                <input type="datetime-local" id="initial_datetime" name="initial_datetime">
+            </select>
+            <hr>
+                <p><label for="commentary">Commentary:</label></p>
+                <p align=center><textarea class="commentarea" id="commentary" name="commentary" rows="4" cols="50"></textarea></p>
+            <p align=right><button type="submit">Set a reminder</button></p>
+            </form>
+        </div>
+    </body>
+</html> 
