@@ -2,3 +2,5 @@
 /__pycache__
 /venv
 .env
+mailing_handler.py
+.gitignore

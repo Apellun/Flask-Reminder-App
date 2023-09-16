@@ -1,5 +1,5 @@
 import pytz
-from datetime import datetime as dt
+from datetime import datetime as dt, timedelta
 
 
 class Reminder:
@@ -10,8 +10,9 @@ class Reminder:
         self.event_name = reminder_data['event_name']
         self.commentary = reminder_data["commentary"]
         self.initial_datetime = reminder_data["initial_datetime"]
-        self.reminder_datetime = 0
-        self.reminder_datetime_str = ""
+        self.reminder_datetime = None
+        self.reminder_datetime_str = None
+        self.one_hour_notification = False
     
     def convert_time(self, initial_time):
         initial_timezone = pytz.timezone(self.initial_timezone)
@@ -19,12 +20,13 @@ class Reminder:
         event_time = initial_timezone.localize(initial_time, is_dst=None)
         return (event_time).astimezone(tz=requested_timezone)
     
-    def validate_time(self):
-        current_time = dt.now(pytz.timezone(self.requested_timezone))
-        print(current_time)
-        print(self.reminder_datetime)
-        if self.reminder_datetime < current_time:
+    def check_notification_availability(self):
+        five_mins_notification_deadline = dt.now(pytz.timezone(self.requested_timezone)) - timedelta(minutes=5)
+        if self.reminder_datetime < five_mins_notification_deadline:
             raise ValueError
+        one_hour_notification_deadline = dt.now(pytz.timezone(self.requested_timezone)) - timedelta(hours=1)
+        if self.reminder_datetime > one_hour_notification_deadline:
+            self.one_hour_notification = True
     
     def set_reminder_datetime(self):
         datetime = dt.strptime(

@@ -1,11 +1,13 @@
+import os
 from dotenv import load_dotenv
 
-load_dotenv() #TODO: doesn't load
+load_dotenv()
     
 class Config:
-    MAIL_SERVER='smtp.gmail.com'
-    MAIL_PORT=587
-    MAIL_USERNAME='mcinnie@gmail.com'
-    MAIL_PASSWORD='zskzbbbzggiyeqry'
+    MAIL_SERVER = str(os.getenv('MAIL_SERVER'))
+    MAIL_PORT = (os.getenv('MAIL_PORT'))
+    MAIL_USERNAME = str(os.getenv('MAIL_USERNAME'))
+    MAIL_PASSWORD = str(os.getenv('MAIL_PASSWORD'))
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
+    FLASK_DEBUG = str(os.getenv('FLASK_DEBUG'))
