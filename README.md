@@ -11,7 +11,7 @@
 `pip install -r requirements.txt`<br>
 `flask run`
 
-This is a simple app I built for myself. It allows the user to keep track of the events in different time zones. The app converts the datetime to the user's selected time zone and sends reminders to the user's email: one an hour before and another one five minutes before the event. If a user requests a reminder for a time that is less than one hour in the future, the user receives only one reminder. If the user selects the datetime in the past, a reminder is not created and the app asks them to pick another time.
+This is a simple app I built for myself. It allows the user to keep track of the events in different time zones. The app converts the datetime to the user's selected time zone and sends reminders to the user's email: one an hour before and another five minutes before the event. If a user requests a reminder for a time that is less than one hour in the future, the user receives only one reminder. If the user selects the datetime in the past, a reminder is not created and the app asks them to pick another time.
 
 <p><b>The endpoint for setting a reminder:</b> localhost:port/reminder/</p>
 
