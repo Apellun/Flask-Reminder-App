@@ -12,7 +12,7 @@ class Reminder:
         self.initial_datetime = reminder_data["initial_datetime"]
         self.reminder_datetime = None
         self.reminder_datetime_str = None
-        self.one_hour_notification = False
+        self.one_hour_notification = False #TODO: move to mailing class
     
     def convert_time(self, initial_time):
         initial_timezone = pytz.timezone(self.initial_timezone)

@@ -6,10 +6,11 @@ from flask_mail import Message
 import tools
 from config import Config
 from reminder import Reminder
-from server import create_app_and_services
+from server import create_app
+from views import reminder_ns
+from services import mail, scheduler
 
-
-app, mail, scheduler, reminder_ns = create_app_and_services(Config)
+app = create_app(Config)
 
 
 def send_notification(user_email: str, text: str, comment: str) -> None:
