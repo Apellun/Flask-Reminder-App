@@ -1,0 +1,1 @@
+from project.services.reminder_service import ReminderService as reminder_service

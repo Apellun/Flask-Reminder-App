@@ -17,7 +17,7 @@ This is a simple app I built for myself. It allows the user to keep track of the
 
 ## Challenges
 
-I had trouble with the app's architecture: I wanted to separate the views, the tool functions, and the reminders logic into different modules. But every I tried I ran into the same circular import issue, since to use the mail and the scheduler I had to use the exact instances created with the app initialization. I've yet to find a way to go around this issue, for now, I decided that the best way to go is to just keep everything in one module.
+For a long time, I had trouble with the app's structure. I wanted to separate the views, the tool functions, and the services into different modules. But every time I tried, I ran into the circular import issue connected to the mail and the scheduler objects initialization. Right now I've managed to solve it.
 
 ## Functionality I am planning to add in the future
 
@@ -45,7 +45,7 @@ I had trouble with the app's architecture: I wanted to separate the views, the t
 
 ## Трудности
 
-У меня возникли проблемы с архитектурой приложения. Я хотела разделить вью, служебные функции и логику напоминалок на модули. Но каждый раз, когда я пыталась это сделать, я натыкалась на проблему циклического импорта, ведь, чтобы использовать функциональность mail и scheduler, мне нужны были объекты, которые создаются при инициализации приложения. Я до сих пор пытаюсь решить эту проблему. Пока просто оставила большую часть логики в одном модуле.
+Долгое время у меня были проблемы со структурой приложения. Я хотела разделить вью, служебные функции и сервисы на модули. Но каждый раз, когда я пыталась это сделать, я натыкалась на проблему циклического импорта, связанного с инициализацией объектов mail и scheduler. На данный момент я с этим разобралась.
 
 ## Функционал, который я планирую добавить в будущем
 
