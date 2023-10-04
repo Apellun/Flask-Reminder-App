@@ -5,8 +5,8 @@
 
 ## How to run:
 
-1. Download the app folder to your computer.
-2. Fill in the example.env file and rename it into .env.
+1. Download the repository to your computer.
+2. Fill in the project/example.env file and rename it into .env.
 3. From the project folder in the terminal, run:<br>
 `pip install -r requirements.txt`<br>
 `flask run`
@@ -33,9 +33,9 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 
 ## Как запустить:
 
-1. Скопируйте репозиторий на компьютер
-2. Заполните example.env и переименуйте его в .env.
-3. Из папки проекта в терминале запустите команды:<br>
+1. Скопируйте репозиторий на компьютер.
+2. Заполните project/example.env и переименуйте его в .env
+3. Из папки project проекта в терминале запустите команды:<br>
 `pip install -r requirements.txt`<br>
 `flask run`
 
