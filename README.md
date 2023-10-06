@@ -1,7 +1,7 @@
 <i>Ридми на русском — ниже.</i>
 # Reminder app
 
-<p><b>Technologies:</b> Flask, Flaks-mail, Flask-appscheduler.</p>
+<p><b>Technologies:</b> Flask, Flaks-Mail, Flask-APScheduler.</p>
 
 ## How to run:
 
@@ -29,7 +29,7 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 
 # Приложение Напоминалка
 
-<p><b>Технологии:</b> Flask, Flaks-mail, Flask-appscheduler.</p>
+<p><b>Технологии:</b> Flask, Flaks-Mail, Flask-APScheduler.</p>
 
 ## Как запустить:
 
