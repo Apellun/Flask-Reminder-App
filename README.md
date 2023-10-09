@@ -1,7 +1,11 @@
 <i>Ридми на русском — ниже.</i>
 # Reminder app
 
-<p><b>Technologies:</b> Flask, Flaks-Mail, Flask-APScheduler.</p>
+Web-app created with Flask. Sends emails reminding about the events happening in another time zone by the user’s requested time zone time.
+
+Uses Flask-APScheduler and Flask-Mail, Has a simple HTML-interface.
+
+<p><b>The endpoint for setting a reminder:</b> localhost:port/reminder/</p>
 
 ## How to run:
 
@@ -10,10 +14,6 @@
 3. From the project folder in the terminal, run:<br>
 `pip install -r requirements.txt`<br>
 `flask run`
-
-This is a simple app I built for myself. It allows the user to keep track of the events in different time zones. The app converts the datetime to the user's selected time zone and sends reminders to the user's email: one an hour before and another five minutes before the event. If a user requests a reminder for a time that is less than one hour in the future, the user receives only one reminder. If the user selects the datetime in the past, a reminder is not created and the app asks them to pick another time.
-
-<p><b>The endpoint for setting a reminder:</b> localhost:port/reminder/</p>
 
 ## Challenges
 
@@ -29,7 +29,11 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 
 # Приложение Напоминалка
 
-<p><b>Технологии:</b> Flask, Flaks-Mail, Flask-APScheduler.</p>
+Веб-приложение на Flask. Отправляет электронные письма с напоминанием о событиях в другой временной зоне по времени временной зоны, запрошенной пользователем.
+
+Использует Flask-APScheduler и Flask-Mail, есть простой HTML-интерфейс.
+
+<p><b>Адрес для создания напоминалки:</b> localhost:port/reminder/</p>
 
 ## Как запустить:
 
@@ -38,10 +42,6 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 3. Из папки project проекта в терминале запустите команды:<br>
 `pip install -r requirements.txt`<br>
 `flask run`
-
-Это простое приложение, которое я собрала для себя. Оно помогоает пользователю уследить за событиями в разных часовых поясах. Приложение конвертирует введенную дату-время в дату-время в часовом поясе, заданном ползователем, и отправляет напоминалку ему на почту: одну за час до события и еще одну за пять минут. Если пользователь запрашивает напоминалку для события, которое начинается меньше, чем через час, он получает только одно письмо. Если пользователь выбирает дату-время в прошлом, напоминалка не создается, а приложение просит пользователя выбрать другое время.
-
-<p><b>Адрес для создания напоминалки:</b> localhost:port/reminder/</p>
 
 ## Трудности
 
