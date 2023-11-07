@@ -21,9 +21,10 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 
 ## Functionality I am planning to add in the future
 
-1) Simple convertation of time from one timezone to another.
-2) The ability for users to receive reminders in Whatsapp, maybe also in Telegram.
-3) The ability for users to view their schedule in the app.
+1) Celery for emailing services
+2) Separate convertation of time from one timezone to another.
+3) The ability for users to receive reminders in Whatsapp, maybe also in Telegram.
+4) The ability for users to view their schedule in the app.
 
 <i>Here starts the Readme in Russian.</i>
 
@@ -49,6 +50,7 @@ For a long time, I had trouble with the app's structure. I wanted to separate th
 
 ## Функционал, который я планирую добавить в будущем
 
-1) Простая конвертация даты-времени из одного часового пояса в другой.
-2) Возможность получать напоминалки в Whatsapp, может быть еще в Telegram.
-3) Возможность для пользователей просматривать свое расписание в приложении.
+1) Celery для фцнкционала рассылок
+2) Отдельно конвертация даты-времени из одного часового пояса в другой.
+3) Возможность получать напоминалки в Whatsapp, может быть еще в Telegram.
+4) Возможность для пользователей просматривать свое расписание в приложении.
