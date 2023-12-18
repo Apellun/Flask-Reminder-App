@@ -55,7 +55,7 @@ class Mailing:
             recipients=[self.reminder.user_email]
             )
         with self.app.app_context():
-            mail.send(message=message)
+            self.mail.send(message=message)
 
     def _create_scheduler_job(self, run_date: datetime, text: str) -> None:
         """
